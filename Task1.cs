@@ -7,9 +7,9 @@ namespace CSLight
         static void Main(string[] args)
         {
             bool isDept = true;
-            ulong americanDebt = 31_466_983_123_456;
+            ulong americanDebt = 31466983123456;
             sbyte outdoorTemperature = -10;
-            int speed = 300_000;
+            int speed = 300000;
             string name = "Tom";
             byte age = 30;
             char grade = 'A';
