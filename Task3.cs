@@ -19,8 +19,8 @@ namespace Task3
             int age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Кем ты работаешь?");
             string work = Console.ReadLine();
-            Console.WriteLine($"Тебя зовут {name}, тебе {age}, " +
-                $"по знаку зодиака ты {zodiac} и работаешь как {work}.");
+            Console.WriteLine($"Тебя зовут {name}, тебе {age}, "
+               + $"по знаку зодиака ты {zodiac} и работаешь как {work}.");
         }
     }
 }
