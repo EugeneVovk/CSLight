@@ -11,14 +11,19 @@ namespace Task3
     {
         static void Main(string[] args)
         {
+            string name;
+            string zodiac;
+            int age;
+            string work;
+
             Console.WriteLine("Как тебя зовут?");
-            string name = Console.ReadLine();
+            name = Console.ReadLine();
             Console.WriteLine("Какой твой знак зодиака?");
-            string zodiac = Console.ReadLine();
+            zodiac = Console.ReadLine();
             Console.WriteLine("Сколько тебе лет?");
-            int age = Convert.ToInt32(Console.ReadLine());
+            age = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Кем ты работаешь?");
-            string work = Console.ReadLine();
+            work = Console.ReadLine();
             Console.WriteLine($"Тебя зовут {name}, тебе {age}, "
                + $"по знаку зодиака ты {zodiac} и работаешь как {work}.");
         }
