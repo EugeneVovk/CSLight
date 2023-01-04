@@ -15,12 +15,14 @@ namespace Task4_Swap
         {
             string name = "John";
             string surname = "Paul";
-           
+
+            Console.WriteLine($"Before Swap:\n\tname = {name},\n\tsurname = {surname}");
+
             string temp = name;
             name = surname;
             surname = temp;
 
-            Console.WriteLine($"name = {name}, surname = {surname}");
+            Console.WriteLine($"After Swap:\n\tname = {name},\n\tsurname = {surname}");
         }
     }
 }
