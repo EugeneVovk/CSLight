@@ -6,7 +6,7 @@ namespace StopWord
     {
         static void Main(string[] args)
         {
-            string stopWord = "exit";
+            string stopWord = "FLUGGAENKDECHIOEBOLSEN";
             string userStopWord = null;
 
             while (stopWord != userStopWord)
