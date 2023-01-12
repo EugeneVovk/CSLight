@@ -6,21 +6,23 @@ namespace Task6_PolyclinicWaitingTime
     {
         static void Main(string[] args)
         {
-            int oldLadies;
-            int timePerPerson = 10;
-            int hours;
-            int minutes;
-            int time = 60;
+            int oldLadiesInQueue;
+            int waitHours;
+            int waitMinutes;
+            int fixedTimePerPerson = 10;
+            int numberOfMinutesPerHour = 60;
 
             Console.WriteLine("Ты заходишь в поликлинику\n"
                 + "...и видишь огромную очередь из старушек\n");
             Console.Write("Сколько человек в очереди? ");
-            oldLadies = Convert.ToInt32(Console.ReadLine());
+            oldLadiesInQueue = Convert.ToInt32(Console.ReadLine());
 
-            hours = oldLadies * timePerPerson / time;
-            minutes = oldLadies * timePerPerson % time;
+            int totalWaitTime = oldLadiesInQueue * fixedTimePerPerson;
 
-            Console.WriteLine($"Увы, придётся отстоять {hours} часов и {minutes} минут\n");  
+            waitHours = totalWaitTime / numberOfMinutesPerHour;
+            waitMinutes = totalWaitTime % numberOfMinutesPerHour;
+
+            Console.WriteLine($"Увы, придётся отстоять {waitHours} часов и {waitMinutes} минут\n");  
         }
     }
 }
