@@ -6,20 +6,23 @@ namespace SumOfNumbers
     {
         static void Main(string[] args)
         {
-            Random random = new Random();
-            int number = random.Next(0, 100);
+            int maxNumber = 100;
+            int divisibleByThree = 3;
+            int divisibleByFive = 5;
             int sum = 0;
+            Random random = new Random();
+            int number = random.Next(0, maxNumber);
 
             for (int i = 0; i <= number; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % divisibleByThree == 0 || i % divisibleByFive == 0)
                 {
                     sum += i;
                 }
             }
 
             Console.WriteLine($"Сумма всех положительных чисел меньше {number} (включая число),\n"
-               + $"которые кратные 3 или 5 равно {sum}");
+               + $"которые кратные {divisibleByThree} или {divisibleByFive} равно {sum}");
         }
     }
 }
