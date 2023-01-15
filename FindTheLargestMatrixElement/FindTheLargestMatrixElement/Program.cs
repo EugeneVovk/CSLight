@@ -39,6 +39,7 @@ namespace FindTheLargestMatrixElement
                 Console.WriteLine();
             }
         }
+
         private static int FindTheLargestElement(int[,] matrix)
         {
             int largestElement = matrix[0, 0];
@@ -56,6 +57,7 @@ namespace FindTheLargestMatrixElement
 
             return largestElement;
         }
+
         private static int[,] ZeroOutMatrixElement(int[,] matrix, int element)
         {
             for (int i = 0; i < matrix.GetLength(0); i++)
