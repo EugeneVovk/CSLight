@@ -35,18 +35,19 @@ namespace ListExample
             Console.WriteLine("Твиттер в коллекции находится на позицииЖ " 
                 + socialNetworks.IndexOf("Twitter"));
 
-            // 6. добавление элементов из массива/списка
+            // 7. добавление элементов из массива/списка
             string[] socialNetworksArray = { "VK", "Telegram", "Discord" };
             List<string> socialNetworksList = new List<string>();
             socialNetworksList.AddRange(socialNetworksArray);
             socialNetworksList.AddRange(socialNetworks);
 
-            // 7. очистить лист
+            // 8. очистить лист
             socialNetworksList.Clear();
 
+            // 9. получить размер коллекции
             Console.WriteLine($"\nРазмер коллекции - {socialNetworksList.Count} элементов");
-            Print(socialNetworksList);
 
+            Print(socialNetworksList);
         }
 
         private static void Print<T>(List<T> list)
