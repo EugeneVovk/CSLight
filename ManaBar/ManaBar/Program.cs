@@ -14,13 +14,14 @@ namespace ManaBar
         private static void DrawManaBar(float valueMana, int position, char symbol = '_')
         {
             int maxValue = 10;
+            char shadedPercent = '#';
             float percentBarValue = Convert.ToSingle(valueMana) / maxValue * 100;
 
             string bar = "";
 
             for (int i = 0; i < valueMana; i++)
             {
-                bar += '#';
+                bar += shadedPercent;
             }
 
             Console.WriteLine($" Mana {percentBarValue}%");
