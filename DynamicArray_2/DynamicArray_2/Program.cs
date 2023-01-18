@@ -72,9 +72,7 @@ namespace DynamicArray_2
                 }
                 else if (userInput == "delete")
                 {
-                    Console.WriteLine("\n\tМоя память чиста :)\n");
-
-                    numbers.Clear();
+                    DeleteListValues(numbers);
                 }
                 else
                 {
@@ -85,6 +83,12 @@ namespace DynamicArray_2
                 Console.ReadKey();
                 Console.Clear();
             }
+        }
+
+        private static void DeleteListValues(List<int> numbers)
+        {
+            Console.WriteLine("\n\tМоя память чиста :)\n");
+            numbers.Clear();
         }
 
         private static void PrintMenu()
