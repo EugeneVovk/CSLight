@@ -6,14 +6,15 @@ namespace ReadInt
     {
         static void Main(string[] args)
         {
-            InputANumberFromTheConsole();
+            InputNumberFromConsole();
         }
 
-        private static void InputANumberFromTheConsole()
+        private static int InputNumberFromConsole()
         {
-            ConsoleColor defaultColor = Console.ForegroundColor;
+            int userNumber = -1;
             bool isNotNumber = true;
 
+            ConsoleColor defaultColor = Console.ForegroundColor;
 
             while (isNotNumber)
             {
@@ -26,6 +27,7 @@ namespace ReadInt
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                     Console.WriteLine($"\n\tУдалось преобразовать '{valueInput}' в число {number}\n");
+                    userNumber = number;
                     isNotNumber = false;
                 }
                 else
@@ -36,6 +38,8 @@ namespace ReadInt
 
                 Console.ForegroundColor = defaultColor;
             }
+
+            return userNumber;
         }
     }
 }
