@@ -29,7 +29,7 @@ namespace ExplanatoryDictionary
             UserActions(dictionary);
         }
 
-        private static void PrintDictionary<K, V>(Dictionary<K, V> dictionary)
+        private static void PrintDictionary(Dictionary<string, string> dictionary)
         {
             foreach (var item in dictionary)
             {
@@ -67,7 +67,7 @@ namespace ExplanatoryDictionary
         private static void PrintMenu()
         {
             Console.WriteLine("\nПривет!\n"
-                + "Это словарь по C#, глава Kоллекции.\n" 
+                + "Это словарь по C#, глава Kоллекции.\n"
                 + "\nТы можешь выбрать:\n\n"
                 + " 1 - Посмотреть весь словарь\n"
                 + " 2 - Найти значение слова\n"
@@ -82,11 +82,14 @@ namespace ExplanatoryDictionary
 
         private static void UserActions(Dictionary<string, string> dictionary)
         {
+            const string ONE = "1";
+            const string TWO = "2";
+            const string THREE = "3";
             string userInput;
             bool isUserWorking = true;
 
             while (isUserWorking)
-            {             
+            {
                 PrintMenu();
 
                 Console.Write("Выбери операцию: ");
@@ -94,13 +97,13 @@ namespace ExplanatoryDictionary
 
                 switch (userInput)
                 {
-                    case "1":
+                    case ONE:
                         PrintDictionary(dictionary);
                         break;
-                    case "2":
+                    case TWO:
                         PrintValueByKey(dictionary, GetValueFromUser());
                         break;
-                    case "3":
+                    case THREE:
                         Exit(ref isUserWorking);
                         break;
                     default:
@@ -110,7 +113,6 @@ namespace ExplanatoryDictionary
 
                 Console.ReadKey();
                 Console.Clear();
-
             }
         }
     }
