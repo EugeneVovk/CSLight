@@ -9,43 +9,43 @@ namespace PropertyEx
             Player player = new Player(40, 40);
             Renderer renderer = new Renderer();
 
-            renderer.Draw(player.X, player.Y, '@');
+            renderer.Draw(player.PositionX, player.PositionY, '@');
         }
     }
 
     class Player
     {
-        private int _x { get; }
-        private int _y { get; }
+        private int _positionX;
+        private int _positionY;
 
-        public Player(int x, int y)
+        public Player(int positionX, int positionY)
         {
-            _x = x;
-            _y = y;
+            _positionX = positionX;
+            _positionY = positionY;
         }
 
-        public int X
+        public int PositionX
         {
             get
             {
-                return _x;
+                return _positionX;
             }
         }
 
-        public int Y
+        public int PositionY
         {
             get
             {
-                return _y;
+                return _positionY;
             }
         }
     }
 
     class Renderer
     {
-        public void Draw(int x, int y, char playerSymbol)
+        public void Draw(int positionX, int positionY, char playerSymbol)
         {
-            Console.SetCursorPosition(x, y);
+            Console.SetCursorPosition(positionX, positionY);
             Console.WriteLine(playerSymbol);
         }
     }
