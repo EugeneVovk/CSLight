@@ -17,9 +17,11 @@ namespace MultiplesNumbers
             Console.WriteLine("Давай поиграем!\n");
             Console.Write(" Введи любое число от 1 до 27 включительно: ");
             userNumber= Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"\n ...а я постараюсь вывести количество трехзначных натуральных чисел, которые кратны {userNumber}.");
+            Console.WriteLine($"\n ...а я постараюсь вывести количество "
+                + $"трехзначных натуральных чисел, которые кратны {userNumber}.");
 
             for(int i = userNumber; i < 1000; i+= userNumber) {
+
                 if (i >= lowerLimit && i <= upperLimit )
                 {
                     countMultiples++;
