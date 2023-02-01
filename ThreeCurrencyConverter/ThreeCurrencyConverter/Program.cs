@@ -7,10 +7,18 @@ namespace ThreeCurrencyConverter
     {
         static void Main(string[] args)
         {
-            float userRub = 0;
-            float userUsd = 0;
-            float userEuro = 0;
-            float userBtc = 0;
+            const string One = "1";
+            const string Two = "2";
+            const string Three = "3";
+            const string Four = "4";
+            const string Five = "5";
+            const string Six = "6";
+            const string Seven = "7";
+            const string Eight = "8";
+            float userRub;
+            float userUsd;
+            float userEuro;
+            float userBtc;
             float rubToUsd = 69.80f;
             float rubToEuro = 73.25f;
             float usdToRub = 72.65f;
@@ -19,12 +27,15 @@ namespace ThreeCurrencyConverter
             float euroToUsd = 0.93f;
             float usdToBtc = 18101.0f;
             float btcToUsd = 18102.0f;
-            float exchangeCurrencyCount = 0;
+            float exchangeCurrencyCount;
             bool wantToChangeMoney = true;
-            string userReply = "";
+            string userReply;
             string selectedOperation;
-            string msgSuccess = "\n\tОперация прошла успешно!";
-            string msgFail = "\n\tУвы, недостаточное количество средсв!";
+            string messageSuccess = "\n\tОперация прошла успешно!";
+            string messageFail = "\n\tУвы, недостаточное количество средсв!";
+            string answerYes = "Да";
+            string answerNo = "Нет";
+            int oneSecond = 1000;
 
             Console.WriteLine("\nПривет! Это конвертер валют");
             Console.Write("\nСколько у тебя рублей: ");
@@ -51,12 +62,11 @@ namespace ThreeCurrencyConverter
                 Console.Write("\nТы хочешь обменять деньги? Да/Нет ");
                 userReply = Console.ReadLine();
 
-                if (userReply == "Нет")
+                if (userReply == answerNo)
                 {
                     wantToChangeMoney = false;
-                    break;
                 }
-                else if (userReply == "Да")
+                else if (userReply == answerYes)
                 {
                     Console.WriteLine($"\nКурс валют на сегодня:\n"
                        + $"\n\tUSD: {rubToUsd} / {usdToRub}"
@@ -78,7 +88,7 @@ namespace ThreeCurrencyConverter
 
                     switch (selectedOperation)
                     {
-                        case "1":
+                        case One:
                             Console.Write("Обмен рублей на доллары\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -87,16 +97,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userRub -= exchangeCurrencyCount;
                                 userUsd += exchangeCurrencyCount / rubToUsd;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "2":
+
+                        case Two:
                             Console.Write("Обмен рубли на евро\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -105,16 +115,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userRub -= exchangeCurrencyCount;
                                 userEuro += exchangeCurrencyCount / rubToEuro;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "3":
+
+                        case Three:
                             Console.Write("Обмен доллары на рубли\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -123,16 +133,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userUsd -= exchangeCurrencyCount;
                                 userRub += exchangeCurrencyCount * usdToRub;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "4":
+
+                        case Four:
                             Console.Write("Обмен евро на рубли\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -141,17 +151,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userEuro -= exchangeCurrencyCount;
                                 userRub += exchangeCurrencyCount * euroToRub;
-                                Console.WriteLine(msgSuccess);
-
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "5":
+
+                        case Five:
                             Console.Write("Обмен доллары на евро\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -160,16 +169,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userUsd -= exchangeCurrencyCount;
                                 userEuro += exchangeCurrencyCount / usdToEuro;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "6":
+
+                        case Six:
                             Console.Write("Обмен евро на доллары\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -178,16 +187,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userEuro -= exchangeCurrencyCount;
                                 userUsd += exchangeCurrencyCount / euroToUsd;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "7":
+
+                        case Seven:
                             Console.Write("Покупка биткоина/ов за доллары\n"
                                 + "Сколько хочешь купить? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -196,16 +205,16 @@ namespace ThreeCurrencyConverter
                             {
                                 userUsd -= exchangeCurrencyCount;
                                 userBtc += exchangeCurrencyCount / usdToBtc;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
-                        case "8":
+
+                        case Eight:
                             Console.Write("Продажа биткоина/ов за доллары\n"
                                 + "Сколько хочешь продать? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -214,22 +223,22 @@ namespace ThreeCurrencyConverter
                             {
                                 userBtc -= exchangeCurrencyCount;
                                 userUsd += exchangeCurrencyCount * btcToUsd;
-                                Console.WriteLine(msgSuccess);
+                                Console.WriteLine(messageSuccess);
                             }
                             else
                             {
                                 Console.Clear();
-                                Console.WriteLine(msgFail);
+                                Console.WriteLine(messageFail);
                             }
-
                             break;
+
                         default:
                             Console.Clear();
                             Console.WriteLine("\n\tНеверная операция!");
                             break;
                     }
-                    
-                    Thread.Sleep(1000);
+
+                    Thread.Sleep(oneSecond);
                 }
             }
 
