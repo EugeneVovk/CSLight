@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Net.NetworkInformation;
 
 namespace TrainPlan
 {
     internal class Program
     {
         static void Main(string[] args)
-
         {
             while (true)
             {
