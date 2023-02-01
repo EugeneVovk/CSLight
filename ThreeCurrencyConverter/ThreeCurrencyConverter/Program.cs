@@ -15,6 +15,7 @@ namespace ThreeCurrencyConverter
             const string EuroToUsdMenu = "6";
             const string UsdToBtcMenu = "7";
             const string BtcToUsdMenu = "8";
+
             float userRub;
             float userUsd;
             float userEuro;
