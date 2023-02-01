@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace Pictures
 {
     internal class Program
@@ -6,14 +7,14 @@ namespace Pictures
         static void Main(string[] args)
         {
             int pictureInRow = 3;
-            int userAlbum = 52;
-            int fullFillRow;
+            int pictures = 52;
+            int fullRows;
             int offRowPicture;
 
-            fullFillRow = userAlbum / pictureInRow;
-            offRowPicture = userAlbum % pictureInRow;
+            fullRows = pictures / pictureInRow;
+            offRowPicture = pictures % pictureInRow;
 
-            Console.WriteLine($" Количество полностью заполненных рядов: {fullFillRow}");
+            Console.WriteLine($" Количество полностью заполненных рядов: {fullRows}");
             Console.WriteLine($" Картинок будет сверх меры: {offRowPicture}");
         }
     }
