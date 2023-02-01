@@ -6,11 +6,11 @@ namespace ConsoleMenu
     {
         static void Main(string[] args)
         {
-            string userName = "Ann";
-            string userPassword = "qwe123";
-            string confirmPassword = "";
+            string userName;
+            string userPassword;
+            string confirmPassword;
             bool isWork = true;
-            bool isVerified = false;
+            bool isVerified = true;
 
             Console.BackgroundColor = default;
             ConsoleColor defaulColor = Console.ForegroundColor;
@@ -24,8 +24,9 @@ namespace ConsoleMenu
             {
                 Console.Clear();
 
-                while (!isVerified)
+                while (isVerified)
                 {
+                    Console.SetCursorPosition(0, 5);
                     Console.Write("Введи пароль: ");
                     userPassword = Console.ReadLine();
                     Console.Write("Подтверди пароль: ");
@@ -38,7 +39,7 @@ namespace ConsoleMenu
                     else
                     {
                         Console.BackgroundColor = default;
-                        isVerified = true;
+                        isVerified = false;
                     }
 
                     Console.Clear();
@@ -51,11 +52,9 @@ namespace ConsoleMenu
                 Console.WriteLine("Для выхода нажми Esc");
                 ConsoleKeyInfo pressedKey = Console.ReadKey();
 
-                switch (pressedKey.Key)
+                if (pressedKey.Key == ConsoleKey.Escape)
                 {
-                    case ConsoleKey.Escape:
-                        isWork = false;
-                        break;
+                    isWork = false;
                 }
             }
         }
