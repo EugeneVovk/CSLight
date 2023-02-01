@@ -7,14 +7,14 @@ namespace ThreeCurrencyConverter
     {
         static void Main(string[] args)
         {
-            const string One = "1";
-            const string Two = "2";
-            const string Three = "3";
-            const string Four = "4";
-            const string Five = "5";
-            const string Six = "6";
-            const string Seven = "7";
-            const string Eight = "8";
+            const string RubToUsdMenu = "1";
+            const string RubToEuroMenu = "2";
+            const string UsdToRubMenu = "3";
+            const string EuroToRubMenu = "4";
+            const string UsdToEuroMenu = "5";
+            const string EuroToUsdMenu = "6";
+            const string UsdToBtcMenu = "7";
+            const string BtcToUsdMenu = "8";
             float userRub;
             float userUsd;
             float userEuro;
@@ -88,7 +88,7 @@ namespace ThreeCurrencyConverter
 
                     switch (selectedOperation)
                     {
-                        case One:
+                        case RubToUsdMenu:
                             Console.Write("Обмен рублей на доллары\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -106,7 +106,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Two:
+                        case RubToEuroMenu:
                             Console.Write("Обмен рубли на евро\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -124,7 +124,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Three:
+                        case UsdToRubMenu:
                             Console.Write("Обмен доллары на рубли\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -142,7 +142,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Four:
+                        case EuroToRubMenu:
                             Console.Write("Обмен евро на рубли\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -160,7 +160,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Five:
+                        case UsdToEuroMenu:
                             Console.Write("Обмен доллары на евро\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -178,7 +178,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Six:
+                        case EuroToUsdMenu:
                             Console.Write("Обмен евро на доллары\n"
                                 + "Сколько хочешь обменять? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -196,7 +196,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Seven:
+                        case UsdToBtcMenu:
                             Console.Write("Покупка биткоина/ов за доллары\n"
                                 + "Сколько хочешь купить? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
@@ -214,7 +214,7 @@ namespace ThreeCurrencyConverter
                             }
                             break;
 
-                        case Eight:
+                        case BtcToUsdMenu:
                             Console.Write("Продажа биткоина/ов за доллары\n"
                                 + "Сколько хочешь продать? ");
                             exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
