@@ -75,14 +75,14 @@ namespace ThreeCurrencyConverter
                        + $"\n\tBTC: {usdToBtc} / {btcToUsd}"
                        );
                     Console.WriteLine("\nВыбери необходимую операцию:\n\n"
-                        + " 1 - обменять рубли на доллары\n"
-                        + " 2 - обменять рубли на евро\n"
-                        + " 3 - обменять доллары на рубли\n"
-                        + " 4 - обменять евро на рубли\n"
-                        + " 5 - обменять доллары на евро\n"
-                        + " 6 - обменять евро на доллары\n"
-                        + " 7 - купить биткоин на доллары\n"
-                        + " 8 - продать биткоин на доллары\n"
+                        + $" {RubToUsdMenu} - обменять рубли на доллары\n"
+                        + $" {RubToEuroMenu} - обменять рубли на евро\n"
+                        + $" {UsdToRubMenu} - обменять доллары на рубли\n"
+                        + $" {EuroToRubMenu} - обменять евро на рубли\n"
+                        + $" {UsdToEuroMenu} - обменять доллары на евро\n"
+                        + $" {EuroToUsdMenu} - обменять евро на доллары\n"
+                        + $" {UsdToBtcMenu} - купить биткоин на доллары\n"
+                        + $" {BtcToUsdMenu} - продать биткоин на доллары\n"
                         );
                     Console.Write("Твой выбор: ");
                     selectedOperation = Console.ReadLine();
@@ -105,6 +105,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case RubToEuroMenu:
@@ -123,6 +124,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case UsdToRubMenu:
@@ -141,6 +143,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case EuroToRubMenu:
@@ -159,6 +162,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case UsdToEuroMenu:
@@ -177,6 +181,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case EuroToUsdMenu:
@@ -195,6 +200,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case UsdToBtcMenu:
@@ -213,6 +219,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         case BtcToUsdMenu:
@@ -231,6 +238,7 @@ namespace ThreeCurrencyConverter
                                 Console.Clear();
                                 Console.WriteLine(messageFail);
                             }
+
                             break;
 
                         default:
