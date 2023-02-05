@@ -19,21 +19,21 @@ namespace InsertionSort
 
         private static void InsertSort(int[] array)
         {
-            int minIndexOfValue;
+            int indexNumberToChange;
+            int currentNumber;
 
             for (int i = 0; i < array.Length; i++)
             {
-                minIndexOfValue = i;
+                indexNumberToChange = i;
+                currentNumber = array[i];
 
-                for (int j = i + 1; j < array.Length; j++)
+                while (indexNumberToChange > 0 && currentNumber < array[indexNumberToChange - 1])
                 {
-                    if (array[minIndexOfValue] > array[j])
-                    {
-                        minIndexOfValue = j;
-                    }
+                    array[indexNumberToChange] = array[indexNumberToChange - 1];
+                    indexNumberToChange--;
                 }
 
-                (array[minIndexOfValue], array[i]) = (array[i], array[minIndexOfValue]);
+                array[indexNumberToChange] = currentNumber;
             }
         }
 
