@@ -46,7 +46,6 @@ namespace Aquarium
                         aquarium.Fishes[i].ShowFish();
                         aquarium.Fishes.Remove(aquarium.Fishes[i]);
                     }
-
                 }
 
                 if (aquarium.Fishes.Count > 0)
